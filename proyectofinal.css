@@ -1,4 +1,32 @@
+/* IMÁGENES GENERALES */
+/* Aplica un efecto de transición a varias imágenes para mejorar la UX */
+.peliculas img,
+.casas-escudos img,
+.personajes-wanted img,
+.galeria img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.peliculas img { width: 100px; }
+.casas-escudos img { width: 100px; height: auto; }
+.personajes-wanted img { width: 200px; height: auto; border-radius: 10px; }
+.galeria img { width: 200px; height: auto; border-radius: 10px; } /* Bordes redondeados para estética */
+
+.peliculas img:hover,
+.casas-escudos img:hover,
+.personajes-wanted img:hover,
+.galeria img:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento en hover */
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
 /* HEADER */
+/* El `header` usa flexbox para centrar su contenido en ambas direcciones */
 header {
     display: flex;
     align-items: center;
@@ -9,23 +37,23 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
+    height: 80px; /* Ajuste de altura para evitar recortes inesperados */
 }
 
 .banner img {
     height: 60px;
     padding: 10px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; /* Animación suave al hacer hover */
 }
 
 .banner img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2); /* Efecto de agrandamiento al pasar el cursor */
 }
 
 .menu ul {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Espaciado entre los elementos del menú */
     padding: 0;
     margin: 10px 0 10px 30px;
 }
@@ -40,33 +68,16 @@ header {
 }
 
 /* BODY */
+/* Usa una imagen de fondo que cubre toda la pantalla y permanece fija */
 body {
     background: url('imagenes/fondo.png') center / cover fixed no-repeat;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
+    color: #ffffff; /* Texto en color blanco para mayor contraste */
 }
 
-/* IMÁGENES GENERALES */
-.peliculas img,
-.casas-escudos img,
-.personajes-wanted img,
-.galeria img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.peliculas img { width: 100px; }
-.casas-escudos img { width: 100px; height: auto; }
-.personajes-wanted img { width: 200px; height: auto; border-radius: 10px;}
-.galeria img { width: 200px; height: auto; border-radius: 10px; }
-
-.peliculas img:hover,
-.casas-escudos img:hover,
-.personajes-wanted img:hover,
-.galeria img:hover {
-    transform: scale(1.1);
-}
 
 /* PELÍCULAS */
+/* Se usa `flex-wrap` para que las películas se acomoden en varias filas si es necesario */
 .peliculas {
     display: flex;
     flex-wrap: wrap;
@@ -75,13 +86,14 @@ body {
     margin: 20px auto;
 }
 
+/* Estructura del contenedor de cada película */
 .peliculas > div {
-    width: 48%;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 48%; /* Aproximadamente la mitad de la pantalla */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     display: flex;
     align-items: center;
     padding: 11px;
-    border-radius: 20px;
+    border-radius: 20px; /* Bordes redondeados */
 }
 
 .film-cover {
@@ -106,6 +118,7 @@ body {
 }
 
 /* PERSONAJES WANTED */
+/* Estructura y alineación de los carteles */
 .personajes-wanted {
     color: #fff;
     text-align: center;
@@ -115,20 +128,20 @@ body {
 .personajes-wanted article {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Evita que se desborden si hay muchos carteles */
     gap: 10px;
 }
 
 .wanted {
-    background-color: #a1a1a15d;
+    background-color: #a1a1a15d; /* Fondo semitransparente para efecto envejecido */
     padding: 10px;
     width: 250px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgba(80, 0, 0, 0.5);
-    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(80, 0, 0, 0.5); /* Efecto de sombra para dar profundidad */
+    border-radius: 20px; /* Bordes redondeados para mejorar la estética */
 }
 
-
+/* Ajuste de imagen dentro del cartel */
 .character-image {
     width: 200px;
     height: auto;
@@ -141,23 +154,25 @@ body {
 }
 
 /* FORMULARIO */
+/* Fondo semitransparente para que se integre con la página sin ser invasivo */
 .formulario {
     background-color: rgba(180, 180, 180, 0.486);
     padding: 20px;
     border-radius: 8px;
-    margin: 20px auto; /* Centra horizontalmente */
+    margin: 20px auto;
     width: 400px;
     max-width: 90%;
-    text-align: center; /* Centra los elementos dentro del formulario */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los elementos hijos */
+    align-items: center;
 }
 
 /* FORMULARIO: CAMPOS */
+/* Ajuste de los campos para alineación y diseño responsivo */
 .form-group {
     width: 100%;
-    text-align: left; /* Mantiene alineación del texto */
+    text-align: left;
 }
 
 .auto-width {
@@ -170,16 +185,17 @@ body {
     font-size: 1em;
 }
 
+/* Ajuste para centrar los radio buttons */
 .radio-group {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Asegura que los radio buttons queden centrados */
 }
 
 /* BOTONES */
+/* Distribuye los botones con espacio uniforme */
 .form-actions {
     display: flex;
-    justify-content: center; /* Centra los botones */
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
@@ -192,6 +208,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Botón de enviar con colores llamativos */
 .formulario button[type="submit"] {
     background-color: #5cb85c;
     color: white;
@@ -201,6 +218,7 @@ body {
     background-color: #4cae4c;
 }
 
+/* Botón de reset con color rojo para alertar */
 .formulario button[type="reset"] {
     background-color: #f44336;
     color: white;
