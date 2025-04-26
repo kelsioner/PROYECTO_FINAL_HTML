@@ -105,18 +105,17 @@ body {
 
 .peliculas {
     display: flex;
-    justify-content: space-between; /* Distribuye uniformemente las columnas */
-    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: space-between;
 }
 
 .peliculas > div {
+    width: 48%; /* Cada película ocupa casi la mitad del espacio */
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
-
 
 
 .film-cover {
@@ -126,7 +125,7 @@ body {
 }
 
 .film-info {
-    width: 70%; /* Área del texto */
+    width: 70%;
     color: #ffffff;
     font-size: 16px;
 }
