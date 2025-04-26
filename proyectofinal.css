@@ -1,13 +1,7 @@
- 
- /*HEADER*/
-/* Estilos para el encabezado de la página */
+/* HEADER */
 header {
     display: flex;
-}
-    
-header {
-    display: flex;
-    align-items: center; /* Alinea los elementos en el mismo nivel */
+    align-items: center;
     justify-content: center;
 }
 
@@ -15,12 +9,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10px; /* Altura del banner */
+    height: 80px;
 }
 
 .banner img {
-    width: 300px;
-    height: auto; /* Asegura que el banner tenga la misma altura que el menú */
+    height: 60px;
+    padding: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -28,21 +22,16 @@ header {
     transform: scale(1.2);
 }
 
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .menu ul {
     display: flex;
-    gap: 10px; /* Espaciado entre elementos */
-    list-style: none; /* Elimina los puntos de la lista */
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 10px 0 10px 30px;
 }
 
 .menu img {
-    width: auto;
-    height: 20px; /* Igualamos la altura con el banner */
+    height: 30px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -50,126 +39,130 @@ header {
     transform: scale(1.2);
 }
 
-    /*PELICULAS CASAS ESCUDOS Y GALERIA*/
-.peliculas img {
-    width: 100px;
-    transition: transform 0.3s ease-in-out;
-
+/* BODY */
+body {
+    background: url('imagenes/fondo.png') center / cover fixed no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 
-.casas-escudos img {
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-
-}
-
-.personajes-wanted img {
-    width: 150px;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-
-}
-
+/* IMÁGENES GENERALES */
+.peliculas img,
+.casas-escudos img,
+.personajes-wanted img,
 .galeria img {
-    width: 200px;
-    height: auto;
     transition: transform 0.3s ease-in-out;
-
 }
 
-.peliculas img:hover {
-    transform: scale(1.1);
-}
+.peliculas img { width: 100px; }
+.casas-escudos img { width: 100px; height: auto; }
+.personajes-wanted img { width: 200px; height: auto; border-radius: 10px;}
+.galeria img { width: 200px; height: auto; border-radius: 10px; }
 
-.casas-escudos img:hover {
-    transform: scale(1.1);    
-}
-
-.personajes-wanted img:hover {
-    transform: scale(1.1);
-}
+.peliculas img:hover,
+.casas-escudos img:hover,
+.personajes-wanted img:hover,
 .galeria img:hover {
     transform: scale(1.1);
 }
 
-body {
-    background-image: url('imagenes/fondo.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    font: roboto, sans-serif;
-    color: #ffffff;
-}
-
+/* PELÍCULAS */
 .peliculas {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
 }
 
 .peliculas > div {
-    width: 48%; /* Cada película ocupa casi la mitad del espacio */
+    width: 48%;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 11px;
     border-radius: 20px;
 }
 
-
 .film-cover {
-    width: 30%; /* Tamaño de la imagen */
+    width: 30%;
     max-width: 120px;
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .film-info {
     width: 70%;
-    color: #ffffff;
     font-size: 16px;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* GALERÍA */
+.galeria {
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    padding: 20px;
+}
+
+/* PERSONAJES WANTED */
+.personajes-wanted {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.personajes-wanted article {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.wanted {
+    background-color: #a1a1a15d;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(80, 0, 0, 0.5);
+    border-radius: 20px;
 }
 
 
+.character-image {
+    width: 200px;
+    height: auto;
+    border: none;
+}
 
-    /*ENCUESTA*/
-/* Estilos para el contenedor principal de la encuesta */
+.wanted a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* FORMULARIO */
 .formulario {
-    background-color: #ebe0f0; /* Fondo gris claro */
+    background-color: rgba(180, 180, 180, 0.486);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    width: 400px; /* Ancho similar */
-    max-width: 90%; /* Para pantallas más pequeñas */
+    margin: 20px auto; /* Centra horizontalmente */
+    width: 400px;
+    max-width: 90%;
+    text-align: center; /* Centra los elementos dentro del formulario */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos */
 }
 
-/* Estilos para el título de la encuesta */
-.formulario h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px; /* Más espacio debajo del título */
-}
-
-/* Estilos para agrupar elementos del formulario (label + input) */
+/* FORMULARIO: CAMPOS */
 .form-group {
-    margin-bottom: 15px; /* Espacio entre los grupos de elementos */
+    width: 100%;
+    text-align: left; /* Mantiene alineación del texto */
 }
 
-/* Estilos para las etiquetas (Nombre, Película favorita, Comentarios) */
-.formulario label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-weight: bold;
-}
-
-/* Estilos para los campos de texto, select y textarea */
-.formulario input[type="text"],
-.formulario select,
-.formulario textarea {
+.auto-width {
     width: calc(100% - 12px);
-    padding: 10px; /* Más padding para parecerse */
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -177,73 +170,42 @@ body {
     font-size: 1em;
 }
 
-/* Estilos para el selector desplegable (Película favorita) */
-.formulario select {
-    appearance: none;
-    background-color: #ffffff;  
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 1em;
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Asegura que los radio buttons queden centrados */
 }
 
-/* Estilos para las etiquetas de los radio buttons (Casas de Hogwarts) */
-.radio-group label {
-    display: block; /* Radio buttons y texto en líneas separadas */
-    margin-bottom: 8px; /* Espacio entre cada opción de casa */
-    font-weight: normal;
-    color: #555;
-}
-
-/* Estilos para los radio buttons */
-.radio-group input[type="radio"] {
-    margin-right: 8px; /* Espacio a la derecha del radio button */
-}
-
-/* Estilos para el contenedor de los botones (Enviar y Cancelar) */
+/* BOTONES */
 .form-actions {
     display: flex;
-    justify-content: flex-end; /* Botones a la derecha */
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: 20px; /* Espacio antes de los botones */
+    justify-content: center; /* Centra los botones */
+    gap: 10px;
+    margin-top: 20px;
 }
 
-/* Estilos generales para los botones */
 .formulario button {
-    background-color: #ddd; /* Fondo gris claro para los botones */
-    color: #333; /* Texto oscuro */
     padding: 10px 15px;
-    border: 1px solid #ccc; /* Borde */
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
 }
 
-/* Estilos para los botones al pasar el ratón */
-.formulario button:hover {
-    background-color: #ccc; /* Gris un poco más oscuro al pasar el ratón */
-}
-
-/* Estilos específicos para el botón "Enviar" */
 .formulario button[type="submit"] {
-    background-color: #5cb85c; /* Verde para Enviar */
+    background-color: #5cb85c;
     color: white;
-    border: none;
 }
 
-/* Estilos para el botón "Enviar" al pasar el ratón */
 .formulario button[type="submit"]:hover {
-    background-color: #4cae4c; /* Verde más oscuro al pasar el ratón */
+    background-color: #4cae4c;
 }
 
-/* Estilos específicos para el botón "Cancelar" */
 .formulario button[type="reset"] {
-    background-color: #f44336; /* Rojo para Cancelar */
+    background-color: #f44336;
     color: white;
-    border: none;
 }
 
-/* Estilos para el botón "Cancelar" al pasar el ratón */
 .formulario button[type="reset"]:hover {
     background-color: #d32f2f;
 }
