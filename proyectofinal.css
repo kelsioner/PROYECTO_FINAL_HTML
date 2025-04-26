@@ -1,0 +1,114 @@
+/* Estilos para el contenedor principal de la encuesta */
+.formulario {
+    background-color: #ebe0f0; /* Fondo gris claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 400px; /* Ancho similar */
+    max-width: 90%; /* Para pantallas más pequeñas */
+}
+
+/* Estilos para el título de la encuesta */
+.formulario h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Más espacio debajo del título */
+}
+
+/* Estilos para agrupar elementos del formulario (label + input) */
+.form-group {
+    margin-bottom: 15px; /* Espacio entre los grupos de elementos */
+}
+
+/* Estilos para las etiquetas (Nombre, Película favorita, Comentarios) */
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de texto, select y textarea */
+.formulario input[type="text"],
+.formulario select,
+.formulario textarea {
+    width: calc(100% - 12px);
+    padding: 10px; /* Más padding para parecerse */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* Estilos para el selector desplegable (Película favorita) */
+.formulario select {
+    appearance: none;
+    background-color: #ffffff;  
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+}
+
+/* Estilos para las etiquetas de los radio buttons (Casas de Hogwarts) */
+.radio-group label {
+    display: block; /* Radio buttons y texto en líneas separadas */
+    margin-bottom: 8px; /* Espacio entre cada opción de casa */
+    font-weight: normal;
+    color: #555;
+}
+
+/* Estilos para los radio buttons */
+.radio-group input[type="radio"] {
+    margin-right: 8px; /* Espacio a la derecha del radio button */
+}
+
+/* Estilos para el contenedor de los botones (Enviar y Cancelar) */
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Botones a la derecha */
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 20px; /* Espacio antes de los botones */
+}
+
+/* Estilos generales para los botones */
+.formulario button {
+    background-color: #ddd; /* Fondo gris claro para los botones */
+    color: #333; /* Texto oscuro */
+    padding: 10px 15px;
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para los botones al pasar el ratón */
+.formulario button:hover {
+    background-color: #ccc; /* Gris un poco más oscuro al pasar el ratón */
+}
+
+/* Estilos específicos para el botón "Enviar" */
+.formulario button[type="submit"] {
+    background-color: #5cb85c; /* Verde para Enviar */
+    color: white;
+    border: none;
+}
+
+/* Estilos para el botón "Enviar" al pasar el ratón */
+.formulario button[type="submit"]:hover {
+    background-color: #4cae4c; /* Verde más oscuro al pasar el ratón */
+}
+
+/* Estilos específicos para el botón "Cancelar" */
+.formulario button[type="reset"] {
+    background-color: #f44336; /* Rojo para Cancelar */
+    color: white;
+    border: none;
+}
+
+/* Estilos para el botón "Cancelar" al pasar el ratón */
+.formulario button[type="reset"]:hover {
+    background-color: #d32f2f;
+}
