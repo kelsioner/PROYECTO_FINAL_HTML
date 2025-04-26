@@ -1,17 +1,72 @@
+    /*HEADER*/
+/* Estilos para el encabezado de la página */
 header {
     display: flex;
-    width: 1800px;
 }
     
-.banner{
-    width: 50%;
-};
+header {
+    display: flex;
+    align-items: center; /* Alinea los elementos en el mismo nivel */
+    justify-content: center;
+    gap: 20px; /* Espacio entre el banner y el menú */
+}
 
-.menu{
-    width: 100px;   
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner img {
+    width: 300px;
+    height: auto; /* Asegura que el banner tenga la misma altura que el menú */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px; /* Espaciado entre elementos */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+.menu img {
+    width: 50px;
+    height: auto; /* Igualamos la altura con el banner */
+    transition: transform 0.3s ease-in-out; /* Efecto de animación */
+}
+
+.menu img:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+    /*PELICULAS CASAS ESCUDOS Y GALERIA*/
+.peliculas img {
+    width: 100px;
+}
+
+.casas-escudos img {
+    width: 100px;
+    height: auto;
+}
+
+.personajes-wanted img {
+    width: 150px;
+    height: auto;
+}
+
+.galeria img {
+    width: 200px;
+    height: auto;
 }
 
 
+
+    /*ENCUESTA*/
 /* Estilos para el contenedor principal de la encuesta */
 .formulario {
     background-color: #ebe0f0; /* Fondo gris claro */
