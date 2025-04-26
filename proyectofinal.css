@@ -20,6 +20,11 @@ header {
 .banner img {
     width: 300px;
     height: auto; /* Asegura que el banner tenga la misma altura que el menú */
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner img:hover {
+    transform: scale(1.2);
 }
 
 .menu {
@@ -30,40 +35,62 @@ header {
 
 .menu ul {
     display: flex;
-    gap: 20px; /* Espaciado entre elementos */
+    gap: 10px; /* Espaciado entre elementos */
     list-style: none; /* Elimina los puntos de la lista */
 }
 
 .menu img {
-    width: 50px;
-    height: auto; /* Igualamos la altura con el banner */
-    transition: transform 0.3s ease-in-out; /* Efecto de animación */
+    width: auto;
+    height: 23px; /* Igualamos la altura con el banner */
+    transition: transform 0.3s ease-in-out;
 }
 
 .menu img:hover {
-    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el mouse */
+    transform: scale(1.2);
 }
 
     /*PELICULAS CASAS ESCUDOS Y GALERIA*/
 .peliculas img {
     width: 100px;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .casas-escudos img {
     width: 100px;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .personajes-wanted img {
     width: 150px;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .galeria img {
     width: 200px;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+
 }
 
+.peliculas img:hover {
+    transform: scale(1.1);
+}
+
+.casas-escudos img:hover {
+    transform: scale(1.1);    
+}
+
+.personajes-wanted img:hover {
+    transform: scale(1.1);
+}
+.galeria img:hover {
+    transform: scale(1.1);
+}
 
 
     /*ENCUESTA*/
