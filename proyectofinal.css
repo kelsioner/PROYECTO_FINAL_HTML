@@ -1,3 +1,17 @@
+header {
+    display: flex;
+    width: 1800px;
+}
+    
+.banner{
+    width: 50%;
+};
+
+.menu{
+    width: 100px;   
+}
+
+
 /* Estilos para el contenedor principal de la encuesta */
 .formulario {
     background-color: #ebe0f0; /* Fondo gris claro */
