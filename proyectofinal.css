@@ -1,4 +1,5 @@
-    /*HEADER*/
+ 
+ /*HEADER*/
 /* Estilos para el encabezado de la página */
 header {
     display: flex;
@@ -8,13 +9,13 @@ header {
     display: flex;
     align-items: center; /* Alinea los elementos en el mismo nivel */
     justify-content: center;
-    gap: 20px; /* Espacio entre el banner y el menú */
 }
 
 .banner {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 10px; /* Altura del banner */
 }
 
 .banner img {
@@ -41,7 +42,7 @@ header {
 
 .menu img {
     width: auto;
-    height: 23px; /* Igualamos la altura con el banner */
+    height: 20px; /* Igualamos la altura con el banner */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -91,6 +92,45 @@ header {
 .galeria img:hover {
     transform: scale(1.1);
 }
+
+body {
+    background-image: url('imagenes/fondo.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font: roboto, sans-serif;
+    color: #ffffff;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: space-between; /* Distribuye uniformemente las columnas */
+    gap: 20px;
+}
+
+.peliculas > div {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+
+
+.film-cover {
+    width: 30%; /* Tamaño de la imagen */
+    max-width: 120px;
+    margin-right: 15px;
+}
+
+.film-info {
+    width: 70%; /* Área del texto */
+    color: #ffffff;
+    font-size: 16px;
+}
+
 
 
     /*ENCUESTA*/
