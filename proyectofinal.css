@@ -16,10 +16,10 @@
 .casas-escudos img:hover,
 .personajes-wanted img:hover,
 .galeria img:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento en hover */
+    transform: scale(1.1);
 }
 
-.main-header > p {
+.main-header p {
     width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
@@ -55,7 +55,7 @@ header {
 .banner img {
     height: 60px;
     padding: 10px;
-    transition: transform 0.3s ease-in-out; /* Animación suave al hacer hover */
+    transition: transform 0.3s ease-in-out;
 }
 
 .banner img:hover {
@@ -80,7 +80,6 @@ header {
 }
 
 
-
     /* BODY */
 /* Usa una imagen de fondo que cubre toda la pantalla y permanece fija */
 body {
@@ -88,7 +87,6 @@ body {
     font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
     color: #ffffff; /* Texto en color blanco para mayor contraste */
 }
-
 
 
 
@@ -172,12 +170,16 @@ h1 {
 }
 
 /* Ajustar los tamaños de los escudos */
-.house-image {
-    width: 150px;
-    height: auto;
+.escudo-casa img {
+    height: 190px;
+    width: auto;
     background-color: transparent;
+    transition: transform 0.3s ease-in-out;
 }
 
+.escudo-casa img:hover {
+    transform: scale(1.1);
+}
 
 
     /* PERSONAJES WANTED */
@@ -218,8 +220,6 @@ h1 {
 
 
 
-
-
     /* GALERÍA */
 .galeria {
     text-align: center;
@@ -244,12 +244,41 @@ h1 {
     align-items: center;
 }
 
-/* FORMULARIO: CAMPOS */
 /* Ajuste de los campos para alineación y diseño responsivo */
 .form-group {
     width: 100%;
-    text-align: left;
+    height: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px; /* Ajusta el valor según lo necesites */
+    display: block; /* Asegura que el label ocupe toda la línea */
 }
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea las opciones de radio a la izquierda */
+}
+
+.form-group label {
+    display: block; /* Asegura que el label ocupe toda la línea */
+    margin-top: 2px;
+    margin-bottom: 10px; /* Espacio entre el label y el input */
+    color: #ffffff; /* Color del texto del label */
+}
+
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    resize: vertical;
+}
+
 
 .auto-width {
     width: calc(100% - 12px);
@@ -275,6 +304,7 @@ h1 {
     gap: 10px;
     margin-top: 20px;
 }
+
 
 .formulario button {
     padding: 10px 15px;
