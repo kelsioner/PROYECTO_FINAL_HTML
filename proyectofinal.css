@@ -19,13 +19,25 @@
     transform: scale(1.1); /* Efecto de agrandamiento en hover */
 }
 
+.main-header > p {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    align-items: center;
+    padding: 11px;
+    border-radius: 20px; /* Bordes redondeados */
+}
+
 h1 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
 
-/* HEADER */
+
+
+
+    /* HEADER */
 /* El `header` usa flexbox para centrar su contenido en ambas direcciones */
 header {
     display: flex;
@@ -47,15 +59,15 @@ header {
 }
 
 .banner img:hover {
-    transform: scale(1.2); /* Efecto de agrandamiento al pasar el cursor */
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
 }
 
 .menu ul {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaciado entre los elementos del menú */
+    gap: 20px; /* Espaciado entre los elementos del menú */
     padding: 0;
-    margin: 10px 0 10px 30px;
+    margin: 10px 0 10px 200px;
 }
 
 .menu img {
@@ -67,7 +79,9 @@ header {
     transform: scale(1.2);
 }
 
-/* BODY */
+
+
+    /* BODY */
 /* Usa una imagen de fondo que cubre toda la pantalla y permanece fija */
 body {
     background: url('imagenes/fondo.png') center / cover fixed no-repeat;
@@ -76,7 +90,9 @@ body {
 }
 
 
-/* PELÍCULAS */
+
+
+    /* PELÍCULAS */
 /* Se usa `flex-wrap` para que las películas se acomoden en varias filas si es necesario */
 .peliculas {
     display: flex;
@@ -109,15 +125,62 @@ body {
     text-align: justify;
 }
 
-/* GALERÍA */
-.galeria {
+
+    /*ESCUDOS DE LAS CASAS*/
+
+/* Centrar correctamente el título */
+h1 {
     text-align: center;
-    background: transparent;
-    color: #fff;
-    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-/* PERSONAJES WANTED */
+/* Crear una cuadrícula 4x2 */
+.contenedor-escudos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columnas */
+    grid-template-rows: repeat(2, auto); /* 2 filas */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ubicar los quotes en las columnas 1 y 4 */
+.house-quote {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Ubicar los escudos en las columnas 2 y 3 */
+.escudo-casa:nth-child(odd) {
+    grid-column: 2; /* Coloca los escudos de Gryffindor y Ravenclaw en columna 2 */
+}
+
+.escudo-casa:nth-child(even) {
+    grid-column: 3; /* Coloca los escudos de Slytherin y Hufflepuff en columna 3 */
+}
+
+.escudo-casa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ajustar los tamaños de los escudos */
+.house-image {
+    width: 150px;
+    height: auto;
+    background-color: transparent;
+}
+
+
+
+    /* PERSONAJES WANTED */
 /* Estructura y alineación de los carteles */
 .personajes-wanted {
     color: #fff;
@@ -153,7 +216,20 @@ body {
     color: inherit;
 }
 
-/* FORMULARIO */
+
+
+
+
+    /* GALERÍA */
+.galeria {
+    text-align: center;
+    background: transparent;
+    color: #fff;
+    padding: 20px;
+}
+
+
+    /* FORMULARIO */
 /* Fondo semitransparente para que se integre con la página sin ser invasivo */
 .formulario {
     background-color: rgba(180, 180, 180, 0.486);
