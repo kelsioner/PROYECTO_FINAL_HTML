@@ -36,7 +36,6 @@ h1 {
 
 
 
-
     /* HEADER */
 /* El `header` usa flexbox para centrar su contenido en ambas direcciones */
 header {
@@ -114,6 +113,7 @@ body {
     width: 30%;
     max-width: 120px;
     margin-right: 20px;
+    margin-left: 10px;
 }
 
 .film-info {
@@ -220,23 +220,51 @@ h1 {
 
 
 
-    /* GALERÍA */
+
+/* GALERIA CARRUSEL*/ 
+
+.carrusel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    width: 160%;
+    animation: desplazar 20s infinite linear;
+    gap: 15px; /* Espaciado entre imágenes */
+}
+
+.carrusel-imagenes img {
+    width: 10%;
+    flex: 0 0 auto;
+}
+
+@keyframes desplazar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+    /* GALERÍA EN CUADRICULA
 .galeria {
     text-align: center;
     background: transparent;
     color: #fff;
     padding: 20px;
-}
+}                          */
+
 
 
     /* FORMULARIO */
 /* Fondo semitransparente para que se integre con la página sin ser invasivo */
 .formulario {
-    background-color: rgba(180, 180, 180, 0.486);
+    background-color: #a1a1a15d;
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
-    width: 400px;
+    width: 80%;
     max-width: 90%;
     text-align: center;
     display: flex;
