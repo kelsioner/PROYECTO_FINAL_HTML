@@ -10,7 +10,7 @@
 .peliculas img { width: 100px; }
 .casas-escudos img { width: 100px; height: auto; }
 .personajes-wanted img { width: 200px; height: auto; border-radius: 10px; }
-.galeria img { width: 200px; height: auto; border-radius: 10px; } /* Bordes redondeados para estética */
+.galeria img { width: 200px; height: auto; border-radius: 10px; }
 
 .peliculas img:hover,
 .casas-escudos img:hover,
@@ -25,7 +25,7 @@
     background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     align-items: center;
     padding: 11px;
-    border-radius: 20px; /* Bordes redondeados */
+    border-radius: 20px;
 }
 
 h1 {
@@ -48,7 +48,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px; /* Ajuste de altura para evitar recortes inesperados */
+    height: 80px;
 }
 
 .banner img {
@@ -58,13 +58,13 @@ header {
 }
 
 .banner img:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento al pasar el cursor */
+    transform: scale(1.1);
 }
 
 .menu ul {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaciado entre los elementos del menú */
+    gap: 20px;
     padding: 0;
     margin: 10px 0 10px 200px;
 }
@@ -83,8 +83,8 @@ header {
 /* Usa una imagen de fondo que cubre toda la pantalla y permanece fija */
 body {
     background: url('imagenes/fondo.png') center / cover fixed no-repeat;
-    font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
-    color: #ffffff; /* Texto en color blanco para mayor contraste */
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
 }
 
 
@@ -106,7 +106,7 @@ body {
     display: flex;
     align-items: center;
     padding: 11px;
-    border-radius: 20px; /* Bordes redondeados */
+    border-radius: 20px;
 }
 
 .film-cover {
@@ -198,12 +198,12 @@ h1 {
 }
 
 .wanted {
-    background-color: #a1a1a15d; /* Fondo semitransparente para efecto envejecido */
+    background-color: hsla(0, 0%, 63%, 0.365); /* Fondo semitransparente para efecto envejecido */
     padding: 10px;
     width: 250px;
     text-align: center;
-    box-shadow: 5px 5px 10px rgba(80, 0, 0, 0.5); /* Efecto de sombra para dar profundidad */
-    border-radius: 20px; /* Bordes redondeados para mejorar la estética */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Efecto de sombra para dar profundidad */
+    border-radius: 20px;
 }
 
 /* Ajuste de imagen dentro del cartel */
@@ -233,18 +233,26 @@ h1 {
     display: flex;
     width: 160%;
     animation: desplazar 20s infinite linear;
-    gap: 15px; /* Espaciado entre imágenes */
+    gap: 15px;
+}
+
+.carrusel-imagenes a {
+    display: inline-block; /* Permite que los enlaces mantengan el flujo de las imágenes */
+    width: 10%;
+    flex: 0 0 auto;
 }
 
 .carrusel-imagenes img {
-    width: 10%;
-    flex: 0 0 auto;
+    width: 100%;
+    display: block; /* Evita espacios inesperados debajo de las imágenes */
+    border-radius: 8px; /* Opcional: añade esquinas redondeadas para una mejor estética */
 }
 
 @keyframes desplazar {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
 
 
     /* GALERÍA EN CUADRICULA
@@ -258,9 +266,9 @@ h1 {
 
 
     /* FORMULARIO */
-/* Fondo semitransparente para que se integre con la página sin ser invasivo */
 .formulario {
-    background-color: #a1a1a15d;
+    background-color: hsla(0, 0%, 63%, 0.365); /* Fondo semitransparente para que se integre con la página sin ser invasivo */
+
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
@@ -278,7 +286,7 @@ h1 {
     height: auto;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px; /* Ajusta el valor según lo necesites */
+    margin-bottom: 10px;
     display: block; /* Asegura que el label ocupe toda la línea */
 }
 
@@ -289,10 +297,10 @@ h1 {
 }
 
 .form-group label {
-    display: block; /* Asegura que el label ocupe toda la línea */
+    display: block;
     margin-top: 2px;
     margin-bottom: 10px; /* Espacio entre el label y el input */
-    color: #ffffff; /* Color del texto del label */
+    color: #ffffff;
 }
 
 
