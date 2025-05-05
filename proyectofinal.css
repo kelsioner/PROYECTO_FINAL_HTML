@@ -1,32 +1,44 @@
 /* IMÁGENES GENERALES */
 
-/*Tipografia especial*/
-/* @font-face {
+/* Tipografia especial*/
+@font-face {
     font-family: 'HarryPotter';
     src: url('fonts/HARRYP__.TTF') format('truetype');
 }
 
 .harry_font {
     font-family: 'HarryPotter', sans-serif;
-    font-size: 34pt;
-    text-align:start;
+    font-size: 40pt;
     font-weight: lighter;
     letter-spacing: 2px;
-} */
+    background: linear-gradient(90deg, #7a7a7a, #ffffff);
+    -webkit-background-clip: text; /* Recorta el fondo al texto */
+    -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo */
+     
+}
 
 /*Creo una clase container para hacer los div flexibles y poder dividir seccines*/
-/* .container{
+.container{
     display: flex;
-    width: 100%;
+    margin-top: 70px;
+}
+
+.container h2{
+    text-align:start;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
 }
 
 .personajes{
-    width: 60%;
+    width: 50%;
     padding: 3%;
     margin: 30px;
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
-} */
+}
 
 
 /* Aplica un efecto de transición a varias imágenes para mejorar la UX */
@@ -51,22 +63,34 @@
     transform: scale(1.1);
 }
 
-.main-header p {
+main {
+    margin: 0px 60px;
+    margin-top: 160px;
+}
+
+.main-title {
     width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     align-items: center;
     padding: 11px;
     border-radius: 20px;
+    font-size: 24px;
+    margin: 30px 0px;
 }
 
-h1 {
-    font-size: 30px;
-    font-weight: bold;
+h2 {
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-
+a{
+    text-decoration: none;
+    color: #fff;
+}
 
     /* HEADER */
 /* El `header` usa flexbox para centrar su contenido en ambas direcciones */
@@ -74,6 +98,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: -10px;
 }
 
 .banner {
@@ -96,17 +125,18 @@ header {
 .menu ul {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 35px;
     padding: 0;
     margin: 10px 0 10px 200px;
 }
 
-.menu img {
-    height: 30px;
+.menu p {
+    font-size: 38px;
     transition: transform 0.3s ease-in-out;
 }
 
-.menu img:hover {
+
+.menu p:hover {
     transform: scale(1.2);
 }
 
@@ -117,6 +147,9 @@ body {
     background: url('imagenes/fondo.png') center / cover fixed no-repeat;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 
@@ -127,13 +160,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     margin: 20px auto;
 }
 
 /* Estructura del contenedor de cada película */
 .peliculas > div {
-    width: 48%; /* Aproximadamente la mitad de la pantalla */
+    width: 45%; /*Aproximadamente la mitad de la pantalla */
     background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     display: flex;
     align-items: center;
@@ -149,23 +182,17 @@ body {
 }
 
 .film-info {
-    width: 70%;
+    width: 100%;
     font-size: 16px;
-    padding: 10px;
+    padding: 40px;
     text-align: justify;
 }
 
+/* .card{
+    margin: 0px 20px;
+} */
 
     /*ESCUDOS DE LAS CASAS*/
-
-/* Centrar correctamente el título */
-h1 {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    width: 100%;
-}
 
 /* Crear una cuadrícula 4x2 */
 .contenedor-escudos {
