@@ -12,9 +12,9 @@
     font-weight: lighter;
     letter-spacing: 2px;
     background: linear-gradient(90deg, #7a7a7a, #ffffff);
-    -webkit-background-clip: text; /* Recorta el fondo al texto */
+    background-clip: text; /* Propiedad estándar */
+    -webkit-background-clip: text; /* Propiedad específica para WebKit */
     -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo */
-     
 }
 
 /*Creo una clase container para hacer los div flexibles y poder dividir seccines*/
