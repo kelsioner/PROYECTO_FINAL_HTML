@@ -233,7 +233,7 @@ h1 {
     display: flex;
     width: 160%;
     animation: desplazar 20s infinite linear;
-    gap: 15px;
+    gap: 20px;
 }
 
 .carrusel-imagenes a {
