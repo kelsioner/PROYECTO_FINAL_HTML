@@ -1,4 +1,34 @@
 /* IMÁGENES GENERALES */
+
+/*Tipografia especial*/
+/* @font-face {
+    font-family: 'HarryPotter';
+    src: url('fonts/HARRYP__.TTF') format('truetype');
+}
+
+.harry_font {
+    font-family: 'HarryPotter', sans-serif;
+    font-size: 34pt;
+    text-align:start;
+    font-weight: lighter;
+    letter-spacing: 2px;
+} */
+
+/*Creo una clase container para hacer los div flexibles y poder dividir seccines*/
+/* .container{
+    display: flex;
+    width: 100%;
+}
+
+.personajes{
+    width: 60%;
+    padding: 3%;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 25px;
+} */
+
+
 /* Aplica un efecto de transición a varias imágenes para mejorar la UX */
 .peliculas img,
 .casas-escudos img,
@@ -6,6 +36,8 @@
 .galeria img {
     transition: transform 0.3s ease-in-out;
 }
+
+
 
 .peliculas img { width: 100px; }
 .casas-escudos img { width: 100px; height: auto; }
