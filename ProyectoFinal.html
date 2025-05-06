@@ -26,17 +26,17 @@
 
             <nav class="menu">
                 <ul>
-                    <p class="harry_font"><a href="#peliculas" alt="peliculas" class="peliculas">Peliculas</a></p>
-                    <p class="harry_font"><a href="#casa" alt="casa" class="casa">Imagenes</a></p>
-                    <p class="harry_font"><a href="#personajes" alt="personajes" class="personaje">Personajes</a></p>
-                    <p class="harry_font"><a href="#galeria" alt="gleria" class="galeria">Galeria</a></p>
-                    <p class="harry_font"><a href="#formulario" alt="encuesta" class="encuesta">Formulario</a></p>
+                    <p class="harry_font"><a href="#films" alt="peliculas" class="peliculas">Peliculas</a></p>
+                    <p class="harry_font"><a href="#houses" alt="casa" class="casa">Imagenes</a></p>
+                    <p class="harry_font"><a href="#characters" alt="personajes" class="personaje">Personajes</a></p>
+                    <p class="harry_font"><a href="#gallery" alt="gleria" class="galeria">Galeria</a></p>
+                    <p class="harry_font"><a href="#form" alt="encuesta" class="encuesta">Formulario</a></p>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <h1 class="main-title">
+            <h1 class="main-title" id="header">
                 Harry Potter es una saga de siete libros de fantasía escrita por J.K. Rowling. Narra la historia de
                     un joven mago y sus aventuras en el mundo mágico, especialmente en el colegio Hogwarts.
             </h1>
@@ -59,6 +59,7 @@
 
                     <p>&nbsp;</p>
                     <p>&nbsp;</p>
+
                     <div class="personajes">
                         <article class="casas">
                             <h2 class="harry_font">Casas</h2>
@@ -88,11 +89,12 @@
                         </article>
                     </div>
                 </section>
+
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
 
                 <section>
-                    <h2 class="harry_font">Peliculas</h2>
+                    <h2 class="harry_font" id="films">Peliculas</h2>
 
                     <article class="peliculas">
 
@@ -219,9 +221,9 @@
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
 
+                <section class="seccion-escudos">
+                    <h2 class="harry_font" id="houses">Escudos</h2>
 
-                <section class="seccion-escudos" id="casa">
-                    <h2 class="harry_font">Escudos</h2>
                     <article class="contenedor-escudos">
                         <div class="escudo-casa">
                             <a href="https://es.wikipedia.org/wiki/Gryffindor" target="_blank">
@@ -256,9 +258,8 @@
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
 
-
-                <section class="personajes-wanted" id="personajes">
-                    <h2 class="harry_font">Personajes</h2>
+                <section class="personajes-wanted">
+                    <h2 class="harry_font" id="characters">Personajes</h2>
                     <article>
                         <div class="wanted">
                             <h2 class="character-name">Lord Voldemort</h2>
@@ -300,8 +301,8 @@
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
 
-                <section class="galeria" id="galeria">
-                    <h2 class="harry_font">Galería</h2>
+                <section class="galeria">
+                    <h2 class="harry_font" id="gallery">Galería</h2>
                     <div class="carrusel">
                         <div class="carrusel-imagenes">
                             <a href="https://www.gettyimages.es/fotos/harry-potter" target="_blank">
@@ -338,23 +339,22 @@
                     </div>
                 </section>
 
-
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
 
-                <section class="formulario" id="formulario">
-                    <h2 class="harry_font">Tu Opinion sobre Harry Potter</h2>
+                <section class="formulario">
+                    <h2 class="harry_font" id="form">Tu Opinion sobre Harry Potter</h2>
                     <form id="encuesta-form" action="enviar.php" method="post">
 
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
-                            <input class="auto-width" type="text" id="nombre" name="nombre"
+                            <input class="auto-width" type="text" name="nombre"
                                 placeholder="Tu nombre aquí">
                         </div>
 
                         <div class="form-group">
                             <label for="pelicula">¿Pelicula favorita?</label>
-                            <select class="auto-width" id="pelicula" name="pelicula" title="Pelicula favorita">
+                            <select class="auto-width" name="pelicula" title="Pelicula favorita">
                                 <option>La Piedra Filosofal</option>
                                 <option>La Cámara Secreta</option>
                                 <option>El Prisionero de Azkaban</option>
@@ -378,13 +378,13 @@
 
                         <div class="form-group">
                             <label for="comentario">Comentarios:</label>
-                            <textarea class="auto-width form-control" id="comentario" name="comentario"
+                            <textarea class="auto-width form-control" name="comentario"
                                 placeholder="Escribe tu comentario aquí"></textarea>
                         </div>
 
                         <div class="form-actions">
-                            <button id="enviar" type="submit">Enviar</button>
-                            <button id="cancelar" type="reset">Cancelar</button>
+                            <button type="submit">Enviar</button>
+                            <button type="reset">Cancelar</button>
                         </div>
                     </form>
                 </section>
@@ -392,4 +392,9 @@
         </main>
     </div>
 </body>
+
+<footer>
+    <p>2025 &copy; Paula Núñez Ramos <br></p><a href="#header">Inicio</a>
+</footer>
+
 </html>

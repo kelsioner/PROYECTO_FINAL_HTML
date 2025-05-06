@@ -1,9 +1,72 @@
-/* IMÁGENES GENERALES */
+/* Aplica un efecto de transición a varias imágenes para mejorar la UX */
+.peliculas img,
+.casas-escudos img,
+.personajes-wanted img,
+.galeria img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.peliculas img { width: 100px; }
+.casas-escudos img { width: 100px; height: auto; }
+.personajes-wanted img { width: 200px; height: auto; border-radius: 10px; }
+.galeria img { width: 200px; height: auto; border-radius: 10px; }
+
+.peliculas img:hover,
+.casas-escudos img:hover,
+.personajes-wanted img:hover,
+.galeria img:hover {
+    transform: scale(1.1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: -1px;
+}
+
+body {
+    background: url('imagenes/fondo.png') center / cover fixed no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+
+main {
+    margin: 0px 60px;
+    margin-top: 160px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
 
 /* Tipografia especial*/
 @font-face {
     font-family: 'HarryPotter';
     src: url('fonts/HARRYP__.TTF') format('truetype');
+}
+ /* CARRUSEL */
+@keyframes desplazar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .harry_font {
@@ -41,68 +104,15 @@
 }
 
 
-/* Aplica un efecto de transición a varias imágenes para mejorar la UX */
-.peliculas img,
-.casas-escudos img,
-.personajes-wanted img,
-.galeria img {
-    transition: transform 0.3s ease-in-out;
-}
-
-
-
-.peliculas img { width: 100px; }
-.casas-escudos img { width: 100px; height: auto; }
-.personajes-wanted img { width: 200px; height: auto; border-radius: 10px; }
-.galeria img { width: 200px; height: auto; border-radius: 10px; }
-
-.peliculas img:hover,
-.casas-escudos img:hover,
-.personajes-wanted img:hover,
-.galeria img:hover {
-    transform: scale(1.1);
-}
-
-main {
-    margin: 0px 60px;
-    margin-top: 160px;
-}
-
 .main-title {
     width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
     align-items: center;
-    padding: 11px;
+    padding: 8px;
     border-radius: 20px;
-    font-size: 24px;
-    margin: 30px 0px;
-}
-
-h2 {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-a{
-    text-decoration: none;
-    color: #fff;
-}
-
-    /* HEADER */
-/* El `header` usa flexbox para centrar su contenido en ambas direcciones */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(36, 36, 36);
-    width: 100%;
-    height: 150px;
-    position: fixed;
-    top: -10px;
+    font-size: 15px;
+    margin: 10px 0px;
 }
 
 .banner {
@@ -113,7 +123,7 @@ header {
 }
 
 .banner img {
-    height: 60px;
+    height: 38px;
     padding: 10px;
     transition: transform 0.3s ease-in-out;
 }
@@ -125,36 +135,21 @@ header {
 .menu ul {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 20px;
     padding: 0;
-    margin: 10px 0 10px 200px;
+    margin: 4px 0 10px 150px;
 }
 
 .menu p {
-    font-size: 38px;
+    font-size: 30px;
     transition: transform 0.3s ease-in-out;
 }
-
 
 .menu p:hover {
     transform: scale(1.2);
 }
 
-
-    /* BODY */
-/* Usa una imagen de fondo que cubre toda la pantalla y permanece fija */
-body {
-    background: url('imagenes/fondo.png') center / cover fixed no-repeat;
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-}
-
-
-
-    /* PELÍCULAS */
+   /* PELÍCULAS */
 /* Se usa `flex-wrap` para que las películas se acomoden en varias filas si es necesario */
 .peliculas {
     display: flex;
@@ -193,7 +188,6 @@ body {
 } */
 
     /*ESCUDOS DE LAS CASAS*/
-
 /* Crear una cuadrícula 4x2 */
 .contenedor-escudos {
     display: grid;
@@ -259,7 +253,7 @@ body {
 .wanted {
     background-color: hsla(0, 0%, 63%, 0.365); /* Fondo semitransparente para efecto envejecido */
     padding: 10px;
-    width: 250px;
+    width: 200px;
     text-align: center;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Efecto de sombra para dar profundidad */
     border-radius: 20px;
@@ -277,11 +271,7 @@ body {
     color: inherit;
 }
 
-
-
-
 /* GALERIA CARRUSEL*/ 
-
 .carrusel {
     width: 100%;
     overflow: hidden;
@@ -307,12 +297,6 @@ body {
     border-radius: 8px; /* Opcional: añade esquinas redondeadas para una mejor estética */
 }
 
-@keyframes desplazar {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-
 
     /* GALERÍA EN CUADRICULA
 .galeria {
@@ -321,7 +305,6 @@ body {
     color: #fff;
     padding: 20px;
 }                          */
-
 
 
     /* FORMULARIO */
@@ -362,7 +345,6 @@ body {
     color: #ffffff;
 }
 
-
 .form-group textarea {
     width: 100%;
     padding: 10px;
@@ -373,7 +355,6 @@ body {
     font-size: 1em;
     resize: vertical;
 }
-
 
 .auto-width {
     width: calc(100% - 12px);
@@ -399,7 +380,6 @@ body {
     gap: 10px;
     margin-top: 20px;
 }
-
 
 .formulario button {
     padding: 10px 15px;
@@ -427,4 +407,14 @@ body {
 
 .formulario button[type="reset"]:hover {
     background-color: #d32f2f;
+}
+
+footer {
+    background-color: rgb(15, 15, 15);
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 6px;
+    bottom: 0;
+    width: 100%;
 }
