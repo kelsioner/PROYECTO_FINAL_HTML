@@ -24,7 +24,7 @@ header {
     justify-content: center;
     background-color: rgb(0, 0, 0);
     width: 100%;
-    height: 80px;
+    height: 120px;
     position: fixed;
     top: -1px;
     z-index: 1000;
@@ -41,8 +41,10 @@ body {
 
 main {
     margin: 0px 60px;
-    margin-top: 120px;
+    margin-top: 140px;
+    margin-bottom: 100px;
 }
+
 
 h2 {
     text-align: center;
@@ -51,7 +53,7 @@ h2 {
     margin-bottom: 20px;
     width: 100%;
 }
-
+    
 a {
     text-decoration: none;
     color: #fff;
@@ -67,6 +69,36 @@ a {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+/* Estilos para la tabla de personajes */
+.table-personajes {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.table-personajes th {
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.table-personajes td {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+/* Resaltar nombres de personajes */
+.table-personajes td strong {
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
 
 .harry_font {
     font-family: 'HarryPotter', sans-serif;
