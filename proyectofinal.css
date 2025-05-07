@@ -111,13 +111,13 @@ a {
     -webkit-text-fill-color: transparent; /* Hace el texto transparente para mostrar el fondo */
 }
 
-/*Creo una clase container para hacer los div flexibles y poder dividir seccines*/
+/*Creo una clase container para hacer los  flexibles y poder idir seccines*/
 .container{
     display: flex;
     margin-top: 70px;
 }
 
-.container h2{
+/* .container h2{
     text-align:start;
     margin: 0px 20px;
 }
@@ -126,10 +126,16 @@ a {
     display: flex;
     flex-direction: column;
 }
+*/
+
+#enlace-personajes , #enlace-films, #enlace-escudos, #enlace-galeria, #enlace-form {
+    background-color: rgba(0, 0, 0, 0); 
+    height: 100px;
+}
 
 .personajes{
     width: 50%;
-    padding: 3%;
+    padding: 2%;
     margin: 30px;
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
@@ -341,13 +347,11 @@ a {
 
     /* FORMULARIO */
 .formulario {
-    background-color: hsla(0, 0%, 63%, 0.365); /* Fondo semitransparente para que se integre con la página sin ser invasivo */
-
+    background-color: rgba(161, 161, 161, 0.365); /* Fondo semitransparente para que se integre con la página sin ser invasivo */
     padding: 20px;
     border-radius: 8px;
     margin: 20px auto;
-    width: 80%;
-    max-width: 90%;
+    max-width: 80%;
     text-align: center;
     display: flex;
     flex-direction: column;
