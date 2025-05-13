@@ -117,17 +117,6 @@ a {
     margin-top: 70px;
 }
 
-/* .container h2{
-    text-align:start;
-    margin: 0px 20px;
-}
-
-.sub-container{
-    display: flex;
-    flex-direction: column;
-}
-*/
-
 #enlace-personajes , #enlace-films, #enlace-escudos, #enlace-galeria, #enlace-form {
     background-color: rgba(0, 0, 0, 0); 
     height: 100px;
@@ -140,7 +129,6 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
 }
-
 
 .main-title {
     width: 100%;
@@ -221,10 +209,6 @@ a {
     text-align: justify;
 }
 
-/* .card{
-    margin: 0px 20px;
-} */
-
     /*ESCUDOS DE LAS CASAS*/
 /* Crear una cuadrícula 4x2 */
 .contenedor-escudos {
@@ -271,7 +255,6 @@ a {
 .escudo-casa img:hover {
     transform: scale(1.1);
 }
-
 
     /* PERSONAJES WANTED */
 /* Estructura y alineación de los carteles */
@@ -334,16 +317,6 @@ a {
     display: block; /* Evita espacios inesperados debajo de las imágenes */
     border-radius: 8px; /* Opcional: añade esquinas redondeadas para una mejor estética */
 }
-
-
-    /* GALERÍA EN CUADRICULA
-.galeria {
-    text-align: center;
-    background: transparent;
-    color: #fff;
-    padding: 20px;
-}                          */
-
 
     /* FORMULARIO */
 .formulario {
